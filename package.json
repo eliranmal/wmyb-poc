@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/eliranmal/wmyb-poc/issues"
   },
-  "homepage": "https://github.com/eliranmal/wmyb-poc#readme"
+  "homepage": "https://github.com/eliranmal/wmyb-poc#readme",
+  "dependencies": {
+    "phaser-ce": "^2.8.0"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  }
 }
