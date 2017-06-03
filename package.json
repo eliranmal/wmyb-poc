@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rm -f ./dist/* && webpack --watch --progress",
+    "dev": "webpack -d && webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +19,13 @@
   },
   "homepage": "https://github.com/eliranmal/wmyb-poc#readme",
   "dependencies": {
-    "phaser-ce": "^2.8.0"
+    "phaser": "^2.6.2"
   },
   "devDependencies": {
-    "webpack": "^2.6.1"
+    "css-loader": "^0.28.4",
+    "expose-loader": "^0.7.3",
+    "style-loader": "^0.18.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

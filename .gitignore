@@ -1,3 +1,11 @@
 
+# ide
 .idea
 *.iml
+
+# node/npm
+node_modules
+npm-debug.log
+
+# project
+dist
