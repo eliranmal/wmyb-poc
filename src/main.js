@@ -1,19 +1,22 @@
+import '../styles/reset.css';
 
-require('../styles/reset.css');
+// pre-load required dependencies
+import 'pixi';
+import 'p2';
 
-require('pixi');
-require('p2');
-require('phaser');
+import Phaser from 'phaser';
+import GameState from './states/game-state';
 
-var Phaser = require('phaser');
 
-var game = new Phaser.Game('100', '100', Phaser.AUTO, '', { preload: preload, create: create, update: update });
+class Game extends Phaser.Game {
 
-function preload() {
+    constructor() {
+        super(800, 600, Phaser.AUTO, '', null);
+        // todo - can we split up GameState into create/update etc.?
+        this.state.add('GameState', GameState, false);
+        this.state.start('GameState');
+    }
 }
 
-function create() {
-}
 
-function update() {
-}
+new Game();

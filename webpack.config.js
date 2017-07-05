@@ -12,6 +12,11 @@ module.exports = {
     devtool: 'cheap-eval-source-map',
     module: {
         rules: [
+            // assets
+            {
+                test: /assets\/.*\.png$/,
+                use: 'file-loader'
+            },
             // styles
             {
                 test: /styles\/.*\.css$/,
